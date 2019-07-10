@@ -1,0 +1,8 @@
+query {
+    content: getHomePageContent() {
+        mainText
+        cta {
+            text
+        }
+    }
+}
