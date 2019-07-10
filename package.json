@@ -5,24 +5,35 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "storybook": "start-storybook -p 6006 -c .storybook",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@types/storybook__react": "^4.0.2",
     "apollo-boost": "^0.4.3",
     "apollo-link-context": "^1.0.18",
     "apollo-link-http": "^1.5.15",
+    "awesome-typescript-loader": "^5.2.1",
     "cookie": "^0.4.0",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^9.0.0",
     "react": "^16.8.6",
     "react-apollo": "^2.5.8",
+    "react-docgen-typescript-loader": "^3.1.0",
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-links": "^5.1.9",
+    "@storybook/addons": "^5.1.9",
+    "@storybook/react": "^5.1.9",
     "@types/cookie": "^0.3.3",
     "@types/node": "^11.13.9",
     "@types/react": "^16.8.15",
     "@types/react-dom": "^16.0.11",
+    "babel-loader": "^8.0.6",
     "typescript": "3.5.2"
   },
   "license": "ISC"
