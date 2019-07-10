@@ -10,6 +10,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@storybook/addon-knobs": "^5.1.9",
     "@types/storybook__react": "^4.0.2",
     "apollo-boost": "^0.4.3",
     "apollo-link-context": "^1.0.18",
@@ -33,6 +34,7 @@
     "@types/node": "^11.13.9",
     "@types/react": "^16.8.15",
     "@types/react-dom": "^16.0.11",
+    "@types/storybook__addon-knobs": "^5.0.2",
     "babel-loader": "^8.0.6",
     "typescript": "3.5.2"
   },
