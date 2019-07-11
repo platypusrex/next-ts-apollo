@@ -11,13 +11,10 @@
     "lint:ts": "tslint -p tslint.json"
   },
   "dependencies": {
-    "@storybook/addon-knobs": "^5.1.9",
-    "@types/storybook__react": "^4.0.2",
     "@types/graphql": "^14.2.2",
     "apollo-boost": "^0.4.3",
     "apollo-link-context": "^1.0.18",
     "apollo-link-http": "^1.5.15",
-    "awesome-typescript-loader": "^5.2.1",
     "cookie": "^0.4.0",
     "graphql": "^14.4.2",
     "https-proxy-agent": "^2.2.2",
@@ -25,10 +22,13 @@
     "next": "^9.0.0",
     "react": "^16.8.6",
     "react-apollo": "^2.5.8",
-    "react-docgen-typescript-loader": "^3.1.0",
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "react-docgen-typescript-loader": "^3.1.0",
+    "@storybook/addon-knobs": "^5.1.9",
+    "@types/storybook__react": "^4.0.2",
     "@babel/core": "^7.5.4",
     "@storybook/addon-actions": "^5.1.9",
     "@storybook/addon-links": "^5.1.9",
