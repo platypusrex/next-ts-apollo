@@ -1,9 +1,9 @@
 import { NextPage } from 'next'
 import Link from 'next/link'
-import Layout from '../components/Layout'
-import List from '../components/List'
-import { User } from '../interfaces'
-import { findAll } from '../utils/sample-api'
+import Layout from '../layout/Layout'
+import List from '../shared/components/List'
+import { User } from '../shared/types'
+import { findAll } from '../shared/utils/sample-api'
 
 type Props = {
   items: User[]
