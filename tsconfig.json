@@ -34,7 +34,8 @@
     "typeRoots": ["./node_modules/@types", ".shared/types"]
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "next.config.js"
   ],
   "include": [
     "**/*.ts",
