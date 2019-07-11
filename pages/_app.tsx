@@ -3,6 +3,7 @@ import React from 'react';
 import { ApolloProvider } from 'react-apollo';
 import withApollo from '../shared/apollo/withApollo';
 
+// tslint:disable-next-line no-any
 class MyApp extends App<any> {
   render () {
     const { Component, pageProps, apolloClient } = this.props;

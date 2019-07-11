@@ -6,10 +6,12 @@ import Head from 'next/head';
 import { initApollo } from './initApollo';
 import { ApolloClient } from 'apollo-boost';
 
-function parseCookies (req?: any, options = {}) {
+// tslint:disable-next-line no-any
+function parseCookies (req?: any, options: {} = {}) {
   return cookie.parse(req ? req.headers.cookie || '' : document.cookie, options);
 }
 
+// tslint:disable-next-line no-any
 export default (App: any) => {
   return class WithData extends React.Component<{}, {}> {
     static displayName = `WithData(${App.displayName})`;
@@ -17,6 +19,7 @@ export default (App: any) => {
       apolloState: PropTypes.object.isRequired
     };
 
+    // tslint:disable-next-line no-any
     static async getInitialProps (ctx: any) {
       const {
         Component,
@@ -62,6 +65,7 @@ export default (App: any) => {
           // Prevent Apollo Client GraphQL errors from crashing SSR.
           // Handle them in components via the data.error prop:
           // https://www.apollographql.com/docs/react/api/react-apollo.html#graphql-query-data-error
+          // tslint:disable-next-line no-console
           console.error('Error while running `getDataFromTree`', error);
         }
 
@@ -76,24 +80,25 @@ export default (App: any) => {
       return {
         ...appProps,
         apolloState,
-      }
+      };
     }
 
     apolloClient: ApolloClient<{}>;
 
+    // tslint:disable-next-line no-any
     constructor (props: any) {
       super(props);
       // `getDataFromTree` renders the component first, the client is passed off as a property.
       // After that rendering is done using Next's normal rendering pipeline
       this.apolloClient = initApollo(props.apolloState, {
         getToken: () => {
-          return parseCookies().token
+          return parseCookies().token;
         }
-      })
+      });
     }
 
     render () {
       return <App {...this.props} apolloClient={this.apolloClient} />;
     }
-  }
-}
+  };
+};

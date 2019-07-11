@@ -1,1 +1,0 @@
-{"ast":null,"code":"import * as React from 'react';\nimport Link from 'next/link';\n\nvar ListItem = function ListItem(_ref) {\n  var data = _ref.data;\n  return React.createElement(Link, {\n    href: \"/detail?id=\".concat(data.id)\n  }, React.createElement(\"a\", null, data.id, \": \", data.name));\n};\n\nexport default ListItem;","map":null,"metadata":{},"sourceType":"module"}

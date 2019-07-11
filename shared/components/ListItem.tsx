@@ -1,10 +1,9 @@
-import * as React from 'react'
-import Link from 'next/link'
+import * as React from 'react';
+import Link from 'next/link';
+import { User } from '../types';
 
-import { User } from '../types'
-
-type Props = {
-  data: User
+interface Props {
+  data: User;
 }
 
 const ListItem: React.FunctionComponent<Props> = ({ data }) => (
@@ -13,6 +12,6 @@ const ListItem: React.FunctionComponent<Props> = ({ data }) => (
       {data.id}: {data.name}
     </a>
   </Link>
-)
+);
 
-export default ListItem
+export default ListItem;
