@@ -11,7 +11,8 @@
     "lint:ts": "tslint -p tslint.json"
   },
   "dependencies": {
-    "@types/graphql": "^14.2.2",
+    "@apollo/react-common": "^0.1.0-beta.8",
+    "@apollo/react-hooks": "^0.1.0-beta.10",
     "apollo-boost": "^0.4.3",
     "apollo-link-context": "^1.0.18",
     "apollo-link-http": "^1.5.15",
@@ -32,9 +33,11 @@
     "@storybook/addons": "^5.1.9",
     "@storybook/react": "^5.1.9",
     "@types/cookie": "^0.3.3",
+    "@types/graphql": "^14.2.2",
     "@types/node": "^11.13.9",
     "@types/react": "^16.8.15",
     "@types/react-dom": "^16.0.11",
+    "next-plugin-graphql": "^0.0.2",
     "@types/storybook__addon-knobs": "^5.0.2",
     "@types/storybook__react": "^4.0.2",
     "awesome-typescript-loader": "^5.2.1",
