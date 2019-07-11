@@ -1,9 +1,8 @@
-import * as React from 'react'
+import * as React from 'react';
+import { User } from '../types';
 
-import { User } from '../types'
-
-type ListDetailProps = {
-  item: User
+interface ListDetailProps {
+  item: User;
 }
 
 const ListDetail: React.FunctionComponent<ListDetailProps> = ({
@@ -13,6 +12,6 @@ const ListDetail: React.FunctionComponent<ListDetailProps> = ({
     <h1>Detail for {user.name}</h1>
     <p>ID: {user.id}</p>
   </div>
-)
+);
 
-export default ListDetail
+export default ListDetail;

@@ -7,6 +7,7 @@ let apolloClient: ApolloClient<{}> | null = null;
 
 // Polyfill fetch() on the server (used by apollo-client)
 if (typeof window === 'undefined') {
+  // tslint:disable-next-line no-any
   (global as any).fetch = fetch;
 }
 
@@ -15,6 +16,7 @@ interface CreateOptions {
   fetchOptions?: FetchOptions;
 }
 
+// tslint:disable-next-line no-any
 function create (initialState: any, { getToken, fetchOptions }: CreateOptions) {
   const httpLink = createHttpLink({
     uri: 'https://localhost:4000/graphql',
@@ -42,6 +44,7 @@ function create (initialState: any, { getToken, fetchOptions }: CreateOptions) {
   });
 }
 
+// tslint:disable-next-line no-any
 export function initApollo (initialState: any, options: CreateOptions) {
   // Make sure to create a new client for every server-side request so that data
   // isn't shared between connections (which would be bad)
@@ -52,7 +55,7 @@ export function initApollo (initialState: any, options: CreateOptions) {
     if (process.env.https_proxy) {
       fetchOptions = {
         agent: new (require('https-proxy-agent'))(process.env.https_proxy),
-      }
+      };
     }
     return create(initialState, {
       ...options,

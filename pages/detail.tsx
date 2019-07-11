@@ -1,28 +1,28 @@
-import * as React from 'react'
-import { NextPageContext } from 'next'
-import Layout from '../layout/Layout'
-import { User } from '../shared/types'
-import { findData } from '../shared/utils/sample-api'
-import ListDetail from '../shared/components/ListDetail'
+import * as React from 'react';
+import { NextPageContext } from 'next';
+import Layout from '../layout/Layout';
+import { User } from '../shared/types';
+import { findData } from '@store/sample-api';
+import ListDetail from '../shared/components/ListDetail';
 
-type Props = {
-  item?: User
-  errors?: string
+interface Props {
+  item?: User;
+  errors?: string;
 }
 
 class InitialPropsDetail extends React.Component<Props> {
   static getInitialProps = async ({ query }: NextPageContext) => {
     try {
-      const { id } = query
-      const item = await findData(Array.isArray(id) ? id[0] : id)
-      return { item }
+      const { id } = query;
+      const item = await findData(Array.isArray(id) ? id[0] : id);
+      return { item };
     } catch (err) {
-      return { errors: err.message }
+      return { errors: err.message };
     }
   }
 
   render() {
-    const { item, errors } = this.props
+    const { item, errors } = this.props;
 
     if (errors) {
       return (
@@ -31,7 +31,7 @@ class InitialPropsDetail extends React.Component<Props> {
             <span style={{ color: 'red' }}>Error:</span> {errors}
           </p>
         </Layout>
-      )
+      );
     }
 
     return (
@@ -40,8 +40,8 @@ class InitialPropsDetail extends React.Component<Props> {
       >
         {item && <ListDetail item={item} />}
       </Layout>
-    )
+    );
   }
 }
 
-export default InitialPropsDetail
+export default InitialPropsDetail;
