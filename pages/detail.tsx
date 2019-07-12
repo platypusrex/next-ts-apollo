@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React from 'react';
 import { NextPageContext } from 'next';
-import Layout from '../layout/Layout';
+import { Layout } from '../layout/Layout';
+import { ListDetail } from '../shared/components/ListDetail';
 import { User } from '../shared/types';
-import { findData } from '@store/sample-api';
-import ListDetail from '../shared/components/ListDetail';
+import { findData } from '../shared/utils/sample-api';
 
 interface Props {
   item?: User;

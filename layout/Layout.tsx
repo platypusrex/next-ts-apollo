@@ -6,7 +6,7 @@ interface Props {
   title?: string;
 }
 
-const Layout: React.FC<Props> = ({
+export const Layout: React.FC<Props> = ({
   children,
   title = 'This is the default title',
 }) => (
@@ -28,6 +28,10 @@ const Layout: React.FC<Props> = ({
         |{' '}
         <Link href="/initial-props">
           <a>With Initial Props</a>
+        </Link>{' '}
+        |{' '}
+        <Link href="/recipes">
+          <a>Recipes</a>
         </Link>
       </nav>
     </header>
@@ -38,5 +42,3 @@ const Layout: React.FC<Props> = ({
     </footer>
   </div>
 );
-
-export default Layout;

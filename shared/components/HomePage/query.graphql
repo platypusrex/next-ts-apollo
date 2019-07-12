@@ -1,8 +1,8 @@
-query {
-    content: getHomePageContent() {
-        mainText
-        cta {
-            text
-        }
+query HomePageContent ($id: Float!) {
+  getHomePageContentById (id: $id) {
+    mainText
+    cta {
+      text
     }
+  }
 }

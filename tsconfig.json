@@ -22,9 +22,13 @@
     "noImplicitThis": true,
     "noImplicitReturns": true,
     "paths": {
+      "@layout/*": ["./layout/*"],
+      "@pages/*": ["./pages/*"],
       "@apollo/*": ["./shared/apollo/*"],
       "@components/*": ["./shared/components/*"],
-      "@store/*": ["./shared/utils/*"]
+      "@graphql/*": ["./shared/graphql/*"],
+      "@utils/*": ["./shared/utils/*"],
+      "@types/*": ["./shared/types/*"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
@@ -33,9 +37,13 @@
     "target": "esnext",
     "typeRoots": ["./node_modules/@types", ".shared/types"]
   },
+  "files": [
+    "shared/types/graphql.d.ts"
+  ],
   "exclude": [
     "node_modules",
-    "next.config.js"
+    "next.config.js",
+    "shared/utils/graphqlLoader.ts"
   ],
   "include": [
     "**/*.ts",

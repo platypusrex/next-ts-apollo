@@ -1,0 +1,172 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Board {
+  createdAt: DateTime!
+  creator: User!
+  creatorId: Float!
+  description: String!
+  id: Float!
+  lists: [List!]
+  team: Team
+  teamId: Float!
+  title: String!
+  updatedAt: DateTime!
+  users: [User!]!
+}
+
+type Card {
+  assignedTo: User
+  assignedToId: Float
+  createdAt: DateTime!
+  creator: User!
+  creatorId: Float!
+  description: String
+  id: Float!
+  list: List!
+  listId: Float!
+  title: String!
+  updatedAt: DateTime!
+}
+
+type List {
+  board: Board!
+  boardId: Float!
+  cards: [Card!]
+  createdAt: DateTime!
+  id: Float!
+  position: Float!
+  title: String!
+  updatedAt: DateTime!
+}
+
+type Mutation {
+  addRecipe(input: RecipeInput!): Recipe!
+  confirmUser(token: String!): Boolean!
+  createBoard(input: CreateBoardInput!): Board!
+  createCard(input: CreateCardInput!): Card!
+  createList(input: CreateListInput!): List!
+  createTeam(input: CreateTeamInput!): Team!
+  deleteBoardById(id: Float!): Boolean!
+  deleteCardById(cardId: Float!): Boolean!
+  deleteListById(listId: Float!): Boolean!
+  deleteTeamById(id: Float!): Boolean!
+  login(input: LoginInput!): User
+  register(input: RegisterInput!): User!
+  updateListById(input: UpdateListInput!): List!
+  updateTeamById(input: UpdateTeamInput!): Team!
+}
+
+type Query {
+  allBoards: [Board!]
+  allBoardsByUserId: [Board!]
+  allCardsByListId(listId: Float!): [Card!]
+  allListsByBoardId(boardId: Float!): [List!]
+  allPersonalBoardsByUserId: [Board!]
+  allTeamBoardsByUserId: [Team!]
+  allTeams: [Team!]
+  allTeamsByUserId: [Team!]
+  allUsers: [User!]
+  boardById(boardId: Float!): Board
+  getAllRecipes: [Recipe!]!
+  hello(input: HelloInput!): String!
+  me: User
+  teamById(teamId: Float!): Team
+}
+
+type Recipe {
+  description: String
+  id: String!
+  title: String!
+}
+
+type Team {
+  boards: [Board!]!
+  createdAt: DateTime!
+  creator: User!
+  creatorId: Float!
+  description: String!
+  id: Float!
+  members: [User!]!
+  name: String!
+  updatedAt: DateTime!
+}
+
+type User {
+  boards: [Board!]!
+  confirmed: Boolean!
+  createdAt: DateTime!
+  email: String!
+  firstName: String!
+  fullName: String!
+  id: Float!
+  lastName: String!
+  teams: [Team!]!
+  updatedAt: DateTime!
+}
+
+input CreateBoardInput {
+  description: String
+  teamId: Float
+  title: String!
+}
+
+input CreateCardInput {
+  listId: Float!
+  title: String!
+}
+
+input CreateListInput {
+  boardId: Float!
+  title: String!
+}
+
+input CreateTeamInput {
+  description: String
+  name: String!
+}
+
+input HelloInput {
+  name: String = "world"
+}
+
+input LoginInput {
+  email: String!
+  password: String!
+}
+
+input PasswordInput {
+  password: String!
+}
+
+input RecipeInput {
+  description: String
+  title: String!
+}
+
+input RegisterInput {
+  email: String!
+  firstName: String!
+  lastName: String!
+  password: String!
+}
+
+input UpdateListInput {
+  id: Float!
+  position: Float
+  title: String
+}
+
+input UpdateTeamInput {
+  description: String
+  id: Float!
+  name: String
+}
+
+
+"The javascript `Date` as string. Type represents date and time as the ISO Date string."
+scalar DateTime
