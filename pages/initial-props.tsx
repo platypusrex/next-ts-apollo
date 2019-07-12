@@ -1,10 +1,10 @@
 import React from 'react';
 import { NextPage } from 'next';
 import Link from 'next/link';
-import Layout from '../layout/Layout';
-import List from '../shared/components/List';
+import { Layout } from '../layout/Layout';
+import { List } from '../shared/components/List';
 import { User } from '../shared/types';
-import { findAll } from '@store/sample-api';
+import { findAll } from '../shared/utils/sample-api';
 
 interface Props {
   items: User[];

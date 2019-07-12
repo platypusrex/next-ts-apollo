@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import Link from 'next/link';
-import Layout from '../layout/Layout';
+import { Layout } from '../layout/Layout';
 
 const AboutPage: React.FC<{}> = () => (
   <Layout title="About | Next.js + TypeScript Example">

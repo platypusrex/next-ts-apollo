@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Layout from '../layout/Layout';
+import { Layout } from '../layout/Layout';
 import { NextPage } from 'next';
 
 const IndexPage: NextPage = () => {
