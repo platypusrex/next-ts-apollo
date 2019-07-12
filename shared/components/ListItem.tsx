@@ -6,7 +6,7 @@ interface Props {
   data: User;
 }
 
-export const ListItem: React.FunctionComponent<Props> = ({ data }) => (
+export const ListItem: React.FC<Props> = ({ data }) => (
   <Link href={`/detail?id=${data.id}`}>
     <a>
       {data.id}: {data.name}
