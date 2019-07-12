@@ -1,7 +1,9 @@
 import React from 'react';
 import App, { Container } from 'next/app';
 import { ApolloProvider } from 'react-apollo-hooks';
+import { ThemeProvider } from 'styled-components';
 import { withApollo } from '../shared/apollo/withApollo';
+import { styledTheme } from '../shared/styled/theme';
 
 // tslint:disable-next-line no-any
 class MyApp extends App<any> {
@@ -11,7 +13,9 @@ class MyApp extends App<any> {
     return (
       <Container>
         <ApolloProvider client={apolloClient}>
-          <Component {...pageProps} />
+          <ThemeProvider theme={styledTheme}>
+            <Component {...pageProps} />
+          </ThemeProvider>
         </ApolloProvider>
       </Container>
     );
