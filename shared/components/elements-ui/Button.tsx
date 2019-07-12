@@ -1,24 +1,21 @@
-import * as React from 'react';
-export interface IButtonProps {
-  label: String
-  onClick?: (e:any) => void
+import React, { MouseEvent } from 'react';
+
+export interface ButtonProps {
+  text: String;
+  onClick?: (e: MouseEvent) => void;
 }
 const styles = {
   border: '1px solid #eee',
   borderRadius: 3,
-  backgroundColor: '#FFFFFF',
+  backgroundColor: '#fff',
   cursor: 'pointer',
   fontSize: 15,
   padding: '3px 10px',
   margin: 10,
 };
-const Button: React.SFC<IButtonProps> = (props) => (
-  <button onClick={props.onClick} style={styles} type="button">
-    {props.label}
+
+export const Button: React.FC<ButtonProps> = ({ text, onClick }) => (
+  <button onClick={onClick} style={styles} type="button">
+    {text}
   </button>
 );
-Button.defaultProps = {
-  label: "Default Label",
-  onClick: () => {}
-};
-export default Button;

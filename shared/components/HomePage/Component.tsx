@@ -1,16 +1,14 @@
 import * as React from 'react';
-import Button from '../elements-ui/Button';
+import { Button, ButtonProps } from '../elements-ui/Button';
 
-type Props = {
-  mainText: String,
-  cta: {
-    text: String
-  }
+interface Props {
+  title: React.ReactNode;
+  cta: ButtonProps;
 }
 
-export const HomePage: React.FunctionComponent<Props> = ({ mainText, cta }) => (
+export const HomePage: React.FC<Props> = ({ title, cta }) => (
   <div>
-    <div>{mainText}</div>
-    <Button label={cta.text} />
+    <div>{title}</div>
+    <Button text={cta.text} />
   </div>
 );
