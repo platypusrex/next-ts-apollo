@@ -1,56 +1,28 @@
 import React from 'react';
-import cookie from 'cookie';
-import PropTypes from 'prop-types';
-import { getDataFromTree } from 'react-apollo';
 import Head from 'next/head';
+import ApolloClient from 'apollo-client';
+import { getDataFromTree } from 'react-apollo';
 import { initApollo } from './initApollo';
-import { ApolloClient } from 'apollo-boost';
 
 // tslint:disable-next-line no-any
-function parseCookies (req?: any, options: {} = {}) {
-  return cookie.parse(req ? req.headers.cookie || '' : document.cookie, options);
-}
-
-// tslint:disable-next-line no-any
-export default (App: any) => {
-  return class WithData extends React.Component<{}, {}> {
-    static displayName = `WithData(${App.displayName})`;
-    static propTypes = {
-      apolloState: PropTypes.object.isRequired
-    };
+export const withApollo = (App: any) => {
+  return class Apollo extends React.Component {
+    static displayName = 'withApollo(App)';
 
     // tslint:disable-next-line no-any
     static async getInitialProps (ctx: any) {
-      const {
-        Component,
-        router,
-        ctx: { req, res }
-      } = ctx;
-
-      const apollo = initApollo(
-        {},
-        {
-          getToken: () => parseCookies(req).token
-        }
-      );
-
-      ctx.ctx.apolloClient = apollo;
-
+      const { Component, router } = ctx;
       let appProps = {};
 
       if (App.getInitialProps) {
         appProps = await App.getInitialProps(ctx);
       }
 
-      if (res && res.finished) {
-        // When redirecting, the response is finished.
-        // No point in continuing to render
-        return {};
-      }
+      // Run all GraphQL queries in the component tree
+      // and extract the resulting data
+      const apollo = initApollo();
 
       if (typeof window === 'undefined') {
-        // Run all graphql queries in the component tree
-        // and extract the resulting data
         try {
           // Run all GraphQL queries
           await getDataFromTree(
@@ -74,27 +46,22 @@ export default (App: any) => {
         Head.rewind();
       }
 
-      // Extract query data from the Apollo's store
+      // Extract query data from the Apollo store
       const apolloState = apollo.cache.extract();
 
       return {
         ...appProps,
-        apolloState,
+        apolloState
       };
     }
 
-    apolloClient: ApolloClient<{}>;
+    // tslint:disable-next-line no-any
+    apolloClient: ApolloClient<any>;
 
     // tslint:disable-next-line no-any
     constructor (props: any) {
       super(props);
-      // `getDataFromTree` renders the component first, the client is passed off as a property.
-      // After that rendering is done using Next's normal rendering pipeline
-      this.apolloClient = initApollo(props.apolloState, {
-        getToken: () => {
-          return parseCookies().token;
-        }
-      });
+      this.apolloClient = initApollo(props.apolloState);
     }
 
     render () {
