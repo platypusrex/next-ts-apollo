@@ -1,6 +1,35 @@
 {
   "extend": "../tsconfig.json",
   "compilerOptions": {
-    "jsx": "react"
+    "baseUrl": "../",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "lib": [
+      "dom",
+      "es6",
+      "es2017"
+    ],
+    "paths": {
+      "@pages/*": ["./pages/*"],
+      "@apollo/*": ["./src/apollo/*"],
+      "@components/*": ["./src/components/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@styled/*": ["./src/styled/*"],
+      "@typings/*": ["./src/typings/*"],
+      "@utils/*": ["./src/utils/*"]
+    },
+    "typeRoots": [
+      "../node_modules",
+      "../src/typings"
+    ],
+    "types": [
+      "react",
+      "react-dom",
+      "jest",
+      "storybook__react",
+      "storybook__addon-knobs",
+      "styled-components",
+      "node"
+    ]
   }
 }
