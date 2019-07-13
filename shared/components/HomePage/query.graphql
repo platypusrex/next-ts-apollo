@@ -1,8 +1,0 @@
-query HomePageContent ($id: Float!) {
-  getHomePageContentById (id: $id) {
-    mainText
-    cta {
-      text
-    }
-  }
-}
