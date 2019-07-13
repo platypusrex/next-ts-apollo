@@ -1,6 +1,6 @@
 import React from 'react';
-import { ListItem } from './ListItem';
-import { User } from '../types';
+import { ListItem } from '@components/ListItem';
+import { User } from '@typings/index';
 
 interface Props {
   items: User[];
