@@ -1,20 +1,29 @@
-const path = require("path");
-const SRC_PATH = path.join(__dirname, '../shared/components');
-//dont need stories path if you have your stories inside your //components folder
-module.exports = ({config}) => {
+const path = require('path');
+
+module.exports = ({ config }) => {
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
-    include: [SRC_PATH],
-      use: [
-        {
-          loader: require.resolve('awesome-typescript-loader'),
-          options: {
-            configFileName: './.storybook/tsconfig.json'
-          }
-        },
-        { loader: require.resolve('react-docgen-typescript-loader') }
-      ]
+    use: [
+      {
+        loader: require.resolve('awesome-typescript-loader'),
+        options: {
+          configFileName: './.storybook/tsconfig.json'
+        }
+      },
+    ]
   });
+
+  config.resolve.alias = {
+    "@pages": path.resolve(__dirname, '../pages'),
+    "@apollo": path.resolve(__dirname, '../src/apollo'),
+    "@components": path.resolve(__dirname, '../src/components'),
+    "@hooks": path.resolve(__dirname, '../src/hooks'),
+    "@styled": path.resolve(__dirname, '../src/styled'),
+    "@typings": path.resolve(__dirname, '../src/typings'),
+    "@utils": path.resolve(__dirname, '../src/utils'),
+  };
+
   config.resolve.extensions.push('.ts', '.tsx');
+
   return config;
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import ApolloClient from 'apollo-client';
 import { getDataFromTree } from 'react-apollo';
-import { initApollo } from './initApollo';
+import { initApollo} from './initApollo';
 
 // tslint:disable-next-line no-any
 export const withApollo = (App: any) => {

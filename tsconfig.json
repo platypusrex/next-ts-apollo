@@ -10,6 +10,7 @@
     "jsx": "preserve",
     "lib": [
       "dom",
+      "es6",
       "es2017"
     ],
     "module": "esnext",
@@ -22,28 +23,37 @@
     "noImplicitThis": true,
     "noImplicitReturns": true,
     "paths": {
-      "@layout/*": ["./layout/*"],
       "@pages/*": ["./pages/*"],
-      "@apollo/*": ["./shared/apollo/*"],
-      "@components/*": ["./shared/components/*"],
-      "@graphql/*": ["./shared/graphql/*"],
-      "@utils/*": ["./shared/utils/*"],
-      "@types/*": ["./shared/types/*"]
+      "@apollo/*": ["./src/apollo/*"],
+      "@components/*": ["./src/components/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@styled/*": ["./src/styled/*"],
+      "@typings/*": ["./src/typings/*"],
+      "@utils/*": ["./src/utils/*"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
+    "sourceMap": true,
     "strict": true,
     "strictNullChecks": true,
     "target": "esnext",
-    "typeRoots": ["./node_modules/@types", ".shared/types"]
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/typings"
+    ]
   },
   "files": [
-    "shared/types/graphql.d.ts"
+    "src/typings/graphql.d.ts",
+    "jest.setup.ts"
   ],
   "exclude": [
     "node_modules",
     "next.config.js",
-    "shared/utils/graphqlLoader.ts"
+    "src/utils/graphqlLoader.ts",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.test.ts",
+    "**/*.test.tsx"
   ],
   "include": [
     "**/*.ts",

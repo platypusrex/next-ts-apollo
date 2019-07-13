@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Link from 'next/link';
-import { User } from '../types';
+import { User } from '@typings/index';
 
 interface Props {
   data: User;
