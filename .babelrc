@@ -6,6 +6,21 @@
     [
       "styled-components",
       { "ssr": true }
+    ],
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "@pages": "./pages",
+          "@apollo": "./src/apollo",
+          "@components": "./src/components",
+          "@hooks": "./src/hooks",
+          "@styled": "./src/styled",
+          "@typings": "./src/typings",
+          "@utils": "./src/utils",
+        }
+      }
     ]
   ]
 }
