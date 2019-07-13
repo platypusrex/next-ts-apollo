@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { Layout } from '../layout/Layout';
 import { NextPage } from 'next';
+import { Layout } from '@components/Layout';
 
 const IndexPage: NextPage = () => {
   return (

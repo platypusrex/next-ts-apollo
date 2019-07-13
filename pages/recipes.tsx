@@ -1,13 +1,8 @@
 import React from 'react';
-import { Link } from '../shared/components/Link';
-import { useAllRecipes } from '../shared/hooks/recipe/useAllRecipes';
+import { Layout } from '@components/Layout';
+import { Link } from '@components/Link';
+import { useAllRecipes } from '@hooks/recipe/useAllRecipes';
 import styled from 'styled-components';
-
-const RecipesWrapper = styled.div`
-  font-family: Tahoma, sans-serif; 
-  display: flex;
-  flex-direction: column;
-`;
 
 const TitleWrapper = styled.div`
   display: flex;
@@ -44,22 +39,23 @@ const Recipes: React.FC<{}> = () => {
   const { recipes } = useAllRecipes();
 
   return (
-    <RecipesWrapper>
+    <Layout title="Recipes">
       <TitleWrapper>
-        <PageTitle>Some Sweet Recipes</PageTitle>
-
-        <Link href="/" size="large">Go home</Link>
+        <PageTitle>
+          Some Sweet Recipes
+        </PageTitle>
       </TitleWrapper>
-
       <List>
         {recipes.map(recipe => (
           <ListItem key={recipe.id}>
-            <h4 style={{ marginBottom: 5 }}>{recipe.title}</h4>
+            <h4>{recipe.title}</h4>
             <span>{recipe.description}</span>
           </ListItem>
         ))}
       </List>
-    </RecipesWrapper>
+
+      <Link href="/" size="lg">Go home</Link>
+    </Layout>
   );
 };
 

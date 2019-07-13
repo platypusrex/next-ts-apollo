@@ -1,9 +1,9 @@
 import React from 'react';
 import { NextPageContext } from 'next';
-import { Layout } from '../layout/Layout';
-import { ListDetail } from '../shared/components/ListDetail';
-import { User } from '../shared/types';
-import { findData } from '../shared/utils/sample-api';
+import { Layout } from '@components/Layout/';
+import { ListDetail } from '@components/ListDetail';
+import { User } from '@typings/index';
+import { findData } from '@utils/sample-api';
 
 interface Props {
   item?: User;
