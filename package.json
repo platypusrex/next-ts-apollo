@@ -10,7 +10,7 @@
     "storybook": "start-storybook -p 6006 -c .storybook",
     "build-storybook": "build-storybook",
     "lint:ts": "tslint -p tslint.json --fix",
-    "generate:types": "apollo client:codegen src/typings/generated.ts --outputFlat --target=typescript --endpoint=http://localhost:4000/graphql --includes=./shared/graphql/**/*.graphql --mergeInFieldsFromFragmentSpreads"
+    "generate:types": "apollo client:codegen src/typings/generated.ts --outputFlat --target=typescript --endpoint=http://localhost:4000/graphql --includes=./src/graphql/**/*.graphql --mergeInFieldsFromFragmentSpreads"
   },
   "dependencies": {
     "apollo-boost": "^0.4.3",
