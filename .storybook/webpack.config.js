@@ -17,6 +17,7 @@ module.exports = ({ config }) => {
     "@pages": path.resolve(__dirname, '../pages'),
     "@apollo": path.resolve(__dirname, '../src/apollo'),
     "@components": path.resolve(__dirname, '../src/components'),
+    "@constants": path.resolve(__dirname, '../src/constants'),
     "@hooks": path.resolve(__dirname, '../src/hooks'),
     "@styled": path.resolve(__dirname, '../src/styled'),
     "@typings": path.resolve(__dirname, '../src/typings'),

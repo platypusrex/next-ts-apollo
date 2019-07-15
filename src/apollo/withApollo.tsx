@@ -1,18 +1,27 @@
 import React from 'react';
 import Head from 'next/head';
+import AppComponent, { AppContext, AppProps } from 'next/app';
 import ApolloClient from 'apollo-client';
 import { getDataFromTree } from 'react-apollo';
 import { initApollo} from './initApollo';
 
-// tslint:disable-next-line no-any
-export const withApollo = (App: any) => {
-  return class Apollo extends React.Component {
+export type WithApolloProps = {
+  apolloClient: ApolloClient<{}>
+}
+
+type ApolloProps = AppProps & {
+  // tslint:disable-next-line no-any
+  apolloState: any;
+}
+
+export const withApollo = (App: typeof AppComponent) => {
+  return class Apollo extends React.Component<ApolloProps> {
     static displayName = 'withApollo(App)';
 
-    // tslint:disable-next-line no-any
-    static async getInitialProps (ctx: any) {
+    static async getInitialProps (ctx: AppContext) {
       const { Component, router } = ctx;
-      let appProps = {};
+      // tslint:disable-next-line no-any
+      let appProps: any = {};
 
       if (App.getInitialProps) {
         appProps = await App.getInitialProps(ctx);
@@ -49,17 +58,14 @@ export const withApollo = (App: any) => {
       // Extract query data from the Apollo store
       const apolloState = apollo.cache.extract();
 
-      return {
-        ...appProps,
-        apolloState
-      };
+      return { ...appProps, apolloState };
     }
 
     // tslint:disable-next-line no-any
     apolloClient: ApolloClient<any>;
 
     // tslint:disable-next-line no-any
-    constructor (props: any) {
+    constructor (props: ApolloProps) {
       super(props);
       this.apolloClient = initApollo(props.apolloState);
     }

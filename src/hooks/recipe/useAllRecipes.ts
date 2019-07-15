@@ -1,5 +1,5 @@
 import { QueryHookResult, useQuery } from 'react-apollo-hooks';
-import { allRecipesQuery } from '@utils/graphqlLoader';
+import { allRecipesQuery } from '@constants/graphqlLoader';
 import { AllRecipesQuery } from '@typings/generated';
 import { Recipe } from '@typings/generated';
 
