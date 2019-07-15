@@ -26,6 +26,7 @@
       "@pages/*": ["./pages/*"],
       "@apollo/*": ["./src/apollo/*"],
       "@components/*": ["./src/components/*"],
+      "@constants/*": ["./src/constants/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@styled/*": ["./src/styled/*"],
       "@typings/*": ["./src/typings/*"],
@@ -49,7 +50,7 @@
   "exclude": [
     "node_modules",
     "next.config.js",
-    "src/utils/graphqlLoader.ts",
+    "src/constants/graphqlLoader.ts",
     "**/*.spec.ts",
     "**/*.spec.tsx",
     "**/*.test.ts",
