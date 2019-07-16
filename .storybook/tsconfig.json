@@ -13,6 +13,7 @@
       "@pages/*": ["./pages/*"],
       "@apollo/*": ["./src/apollo/*"],
       "@components/*": ["./src/components/*"],
+      "@constants/*": ["/constants/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@styled/*": ["./src/styled/*"],
       "@typings/*": ["./src/typings/*"],

@@ -27,8 +27,8 @@ const RecipeDetail: React.FC<{}> = () => {
 
       <ContentWrapper>
         <p>Recipe name: {recipe.title}</p>
-        <p>Recipe name: {recipe.description}</p>
-        <p>Recipe name: {new Date(recipe.createdAt).toLocaleString()}</p>
+        <p>Recipe description: {recipe.description}</p>
+        <p>Recipe created: {new Date(recipe.createdAt).toLocaleString()}</p>
       </ContentWrapper>
     </Layout>
   );

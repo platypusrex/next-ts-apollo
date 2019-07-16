@@ -16,12 +16,12 @@ type ApolloProps = AppProps & {
 
 export const withApollo = (App: typeof AppComponent) => {
   return class Apollo extends React.Component<ApolloProps> {
+    public apolloClient: ApolloClient<{}>;
     static displayName = 'withApollo(App)';
 
     static async getInitialProps (ctx: AppContext) {
       const { Component, router } = ctx;
-      // tslint:disable-next-line no-any
-      let appProps: any = {};
+      let appProps = {};
 
       if (App.getInitialProps) {
         appProps = await App.getInitialProps(ctx);
@@ -37,6 +37,7 @@ export const withApollo = (App: typeof AppComponent) => {
           await getDataFromTree(
             <App
               {...appProps}
+              pageProps={{}}
               Component={Component}
               router={router}
               apolloClient={apollo}
@@ -61,10 +62,6 @@ export const withApollo = (App: typeof AppComponent) => {
       return { ...appProps, apolloState };
     }
 
-    // tslint:disable-next-line no-any
-    apolloClient: ApolloClient<any>;
-
-    // tslint:disable-next-line no-any
     constructor (props: ApolloProps) {
       super(props);
       this.apolloClient = initApollo(props.apolloState);

@@ -1,12 +1,10 @@
 import { ApolloClient, InMemoryCache, HttpLink } from 'apollo-boost';
 import fetch from 'isomorphic-unfetch';
 
-// tslint:disable-next-line no-any
-let apolloClient: ApolloClient<any> | null = null;
+let apolloClient: ApolloClient<{}> | null = null;
 
 // tslint:disable-next-line no-any
 function create (initialState?: any) {
-  // Check out https://github.com/zeit/next.js/pull/4611 if you want to use the AWSAppSyncClient
   const isBrowser = typeof window !== 'undefined';
 
   return new ApolloClient({
