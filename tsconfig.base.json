@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "lib": [
+      "dom",
+      "es6",
+      "es2017"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "paths": {
+      "@pages/*": ["./pages/*"],
+      "@apollo/*": ["./src/apollo/*"],
+      "@components/*": ["./src/components/*"],
+      "@constants/*": ["./src/constants/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@styled/*": ["./src/styled/*"],
+      "@typings/*": ["./src/typings/*"],
+      "@utils/*": ["./src/utils/*"]
+    },
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "target": "esnext",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/typings"
+    ]
+  }
+}

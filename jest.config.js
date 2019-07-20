@@ -4,7 +4,8 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   testRegex: TEST_REGEX,
   transform: {
-    '^.+\\.tsx?$': 'babel-jest'
+    '^.+\\.tsx?$': 'babel-jest',
+    "\\.(gql|graphql)$": "@jagi/jest-transform-graphql"
   },
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],

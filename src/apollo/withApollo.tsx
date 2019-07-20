@@ -3,20 +3,19 @@ import Head from 'next/head';
 import AppComponent, { AppContext, AppProps } from 'next/app';
 import ApolloClient from 'apollo-client';
 import { getDataFromTree } from 'react-apollo';
-import { initApollo} from './initApollo';
+import { initApollo } from './initApollo';
 
 export type WithApolloProps = {
   apolloClient: ApolloClient<{}>
-}
+};
 
 type ApolloProps = AppProps & {
   // tslint:disable-next-line no-any
   apolloState: any;
-}
+};
 
 export const withApollo = (App: typeof AppComponent) => {
   return class Apollo extends React.Component<ApolloProps> {
-    public apolloClient: ApolloClient<{}>;
     static displayName = 'withApollo(App)';
 
     static async getInitialProps (ctx: AppContext) {
@@ -61,6 +60,7 @@ export const withApollo = (App: typeof AppComponent) => {
 
       return { ...appProps, apolloState };
     }
+    public apolloClient: ApolloClient<{}>;
 
     constructor (props: ApolloProps) {
       super(props);

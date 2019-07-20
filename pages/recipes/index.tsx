@@ -36,7 +36,15 @@ const ListItem = styled.li`
 `;
 
 const Recipes: React.FC<{}> = () => {
-  const { recipes } = useAllRecipes();
+  const { recipes, loading, error } = useAllRecipes();
+
+  if (error) {
+    return <p>{error.message}</p>;
+  }
+
+  if (loading) {
+    return <span>loading...</span>;
+  }
 
   return (
     <Layout title="Recipes">

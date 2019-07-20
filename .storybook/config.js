@@ -4,9 +4,12 @@ import { styledTheme } from '../src/styled/theme.ts';
 import { ThemeProvider } from 'styled-components';
 
 // automatically import all files ending in *.stories.js
-const req = require.context('../src/components', true, /\.stories.tsx$/);
+const components = require.context('../src/components', true, /\.stories.tsx$/);
+const pages = require.context('../pages', true, /\.stories.tsx$/);
+const libs = [ components, pages ];
+
 function loadStories() {
-  req.keys().forEach(filename => req(filename));
+  libs.forEach(req => req.keys().forEach(f => req(f)))
 }
 
 addDecorator((story) => (
