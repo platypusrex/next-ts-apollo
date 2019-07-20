@@ -1,28 +1,8 @@
 {
-  "extend": "../tsconfig.json",
+  "extends": "../tsconfig.base",
   "compilerOptions": {
     "baseUrl": "../",
     "jsx": "react",
-    "esModuleInterop": true,
-    "lib": [
-      "dom",
-      "es6",
-      "es2017"
-    ],
-    "paths": {
-      "@pages/*": ["./pages/*"],
-      "@apollo/*": ["./src/apollo/*"],
-      "@components/*": ["./src/components/*"],
-      "@constants/*": ["/constants/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@styled/*": ["./src/styled/*"],
-      "@typings/*": ["./src/typings/*"],
-      "@utils/*": ["./src/utils/*"]
-    },
-    "typeRoots": [
-      "../node_modules",
-      "../src/typings"
-    ],
     "types": [
       "react",
       "react-dom",
@@ -32,5 +12,12 @@
       "styled-components",
       "node"
     ]
-  }
+  },
+  "files": [
+    "../src/typings/graphql.d.ts"
+  ],
+  "exclude": [
+    "../node_modules",
+    "../next.config.js"
+  ]
 }
