@@ -18,7 +18,7 @@
     "apollo-mocked": "^0.2.3",
     "graphql": "^14.4.2",
     "isomorphic-unfetch": "^3.0.0",
-    "next": "^9.0.0",
+    "next": "^9.0.2",
     "react": "^16.8.6",
     "react-apollo": "^2.5.8",
     "react-apollo-hooks": "^0.5.0",
@@ -34,13 +34,13 @@
     "@testing-library/react": "^8.0.5",
     "@types/graphql": "^14.2.2",
     "@types/jest": "^24.0.15",
-    "@types/node": "^11.13.9",
-    "@types/react": "^16.8.15",
-    "@types/react-dom": "^16.0.11",
-    "@types/storybook__addon-knobs": "^5.0.2",
+    "@types/node": "^12.6.8",
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.4",
+    "@types/storybook__addon-knobs": "^5.0.3",
     "@types/storybook__react": "^4.0.2",
     "@types/styled-components": "^4.1.18",
-    "apollo": "^2.15.0",
+    "apollo": "^2.16.0",
     "awesome-typescript-loader": "^5.2.1",
     "babel-jest": "^24.8.0",
     "babel-plugin-module-resolver": "^3.2.0",
@@ -48,7 +48,7 @@
     "jest": "^24.8.0",
     "next-plugin-graphql": "^0.0.2",
     "tslint": "^5.18.0",
-    "typescript": "3.5.2"
+    "typescript": "3.5.3"
   },
   "license": "ISC"
 }
