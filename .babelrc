@@ -13,8 +13,8 @@
         "root": ["./"],
         "alias": {
           "@pages": "./pages",
-          "@apollo": "./src/apollo",
           "@components": "./src/components",
+          "@containers": "./src/containers",
           "@constants": "./src/constants",
           "@hooks": "./src/hooks",
           "@styled": "./src/styled",

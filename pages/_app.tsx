@@ -1,11 +1,11 @@
 import React from 'react';
-import App, { AppProps, Container } from 'next/app';
+import NextApp, { AppProps, Container } from 'next/app';
 import { ApolloProvider } from 'react-apollo-hooks';
 import { ThemeProvider } from 'styled-components';
-import { withApollo, WithApolloProps } from '@apollo/withApollo';
+import { withApollo, WithApolloProps } from '@containers/withApollo';
 import { styledTheme } from '@styled/theme';
 
-class MyApp extends App<AppProps & WithApolloProps> {
+class App extends NextApp<AppProps & WithApolloProps> {
   render () {
     const { Component, pageProps, apolloClient } = this.props;
 
@@ -21,4 +21,4 @@ class MyApp extends App<AppProps & WithApolloProps> {
   }
 }
 
-export default withApollo(MyApp);
+export default withApollo(App);

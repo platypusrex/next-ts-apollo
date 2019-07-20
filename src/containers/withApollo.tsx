@@ -3,7 +3,7 @@ import Head from 'next/head';
 import AppComponent, { AppContext, AppProps } from 'next/app';
 import ApolloClient from 'apollo-client';
 import { getDataFromTree } from 'react-apollo';
-import { initApollo } from './initApollo';
+import { initApollo } from '@utils/initApollo';
 
 export type WithApolloProps = {
   apolloClient: ApolloClient<{}>

@@ -32,6 +32,7 @@ module.exports = ({ config }) => {
     "@apollo": path.resolve(__dirname, '../src/apollo'),
     "@components": path.resolve(__dirname, '../src/components'),
     "@constants": path.resolve(__dirname, '../src/constants'),
+    "@containers": path.resolve(__dirname, '../src/containers'),
     "@hooks": path.resolve(__dirname, '../src/hooks'),
     "@styled": path.resolve(__dirname, '../src/styled'),
     "@typings": path.resolve(__dirname, '../src/typings'),

@@ -22,9 +22,9 @@
     "noImplicitReturns": true,
     "paths": {
       "@pages/*": ["./pages/*"],
-      "@apollo/*": ["./src/apollo/*"],
       "@components/*": ["./src/components/*"],
       "@constants/*": ["./src/constants/*"],
+      "@containers/*": ["./src/containers/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@styled/*": ["./src/styled/*"],
       "@typings/*": ["./src/typings/*"],
