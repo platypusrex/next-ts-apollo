@@ -17,6 +17,7 @@ type ApolloProps = AppProps & {
 export const withApollo = (App: typeof AppComponent) => {
   return class Apollo extends React.Component<ApolloProps> {
     static displayName = 'withApollo(App)';
+    public apolloClient: ApolloClient<{}>;
 
     static async getInitialProps (ctx: AppContext) {
       const { Component, router } = ctx;
@@ -60,7 +61,6 @@ export const withApollo = (App: typeof AppComponent) => {
 
       return { ...appProps, apolloState };
     }
-    public apolloClient: ApolloClient<{}>;
 
     constructor (props: ApolloProps) {
       super(props);
