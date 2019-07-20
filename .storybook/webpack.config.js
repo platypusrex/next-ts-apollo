@@ -39,7 +39,7 @@ module.exports = ({ config }) => {
     "@utils": path.resolve(__dirname, '../src/utils'),
   };
 
-  config.resolve.extensions.push('.ts', '.tsx', '.js', '.jsx', '.graphql', '.gql', );
+  config.resolve.extensions.push('.ts', '.tsx', '.js', '.jsx', '.graphql', '.gql');
 
   return config;
 };
