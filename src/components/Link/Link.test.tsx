@@ -27,5 +27,5 @@ describe('Link', () => {
 
   it('should render with correct href attribute', () => {
     expect(anchorNode).toHaveAttribute('href');
-  })
+  });
 });
