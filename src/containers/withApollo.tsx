@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import AppComponent, { AppContext, AppProps } from 'next/app';
 import ApolloClient from 'apollo-client';
-import { getDataFromTree } from 'react-apollo';
+import { getDataFromTree } from '@apollo/react-ssr';
 import { initApollo } from '@utils/initApollo';
 
 export type WithApolloProps = {
@@ -17,7 +17,6 @@ type ApolloProps = AppProps & {
 export const withApollo = (App: typeof AppComponent) => {
   return class Apollo extends React.Component<ApolloProps> {
     static displayName = 'withApollo(App)';
-    public apolloClient: ApolloClient<{}>;
 
     static async getInitialProps (ctx: AppContext) {
       const { Component, router } = ctx;
@@ -61,6 +60,8 @@ export const withApollo = (App: typeof AppComponent) => {
 
       return { ...appProps, apolloState };
     }
+
+    public apolloClient: ApolloClient<{}>;
 
     constructor (props: ApolloProps) {
       super(props);

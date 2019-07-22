@@ -1,9 +1,10 @@
-import { QueryHookResult, useQuery } from 'react-apollo-hooks';
+import { useQuery } from '@apollo/react-hooks';
+import { QueryResult } from '@apollo/react-common';
 import { recipeByIdQuery } from '@constants/graphqlLoader';
 import { RecipeByIdQuery, RecipeByIdQueryVariables, RecipeDetail } from '@typings/generated';
 import { Omit } from '@typings/shared';
 
-type RecipeByIdResult = Omit<QueryHookResult<RecipeByIdQuery, RecipeByIdQueryVariables>, 'data'>;
+type RecipeByIdResult = Omit<QueryResult<RecipeByIdQuery, RecipeByIdQueryVariables>, 'data'>;
 type UseRecipeById = (recipeId: number | string) => RecipeByIdResult & {
   recipe?: RecipeDetail;
 };
