@@ -14,14 +14,16 @@
     "schema:download": "apollo client:download-schema --endpoint=http://localhost:4000/graphql --includes=./src/graphql/**/*.graphql"
   },
   "dependencies": {
+    "@apollo/react-hooks": "^0.1.0-beta.11",
+    "@apollo/react-ssr": "^0.1.0-beta.1",
+    "@apollo/react-testing": "^0.1.0-beta.6",
     "apollo-boost": "^0.4.3",
-    "apollo-mocked": "^0.2.3",
+    "apollo-mocked": "^0.2.10",
     "graphql": "^14.4.2",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^9.0.2",
     "react": "^16.8.6",
     "react-apollo": "^2.5.8",
-    "react-apollo-hooks": "^0.5.0",
     "react-dom": "^16.8.6",
     "styled-components": "^4.3.2"
   },
