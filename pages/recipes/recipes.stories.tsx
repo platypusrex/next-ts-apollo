@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { ApolloLoadingProvider, ApolloErrorProvider, ApolloMockingProvider } from 'apollo-mocked';
-import { apolloMocks, introspectionResult } from '@utils/apolloMocks';
+import { ApolloLoadingProvider, ApolloErrorProvider, ApolloMockedProvider } from 'apollo-mocked';
+import { apolloMocks, typeDefs } from '@utils/apolloMocks';
 import Recipes from './';
 
 const recipesStories = storiesOf('Recipes', module);
@@ -19,10 +19,10 @@ recipesStories.add('error', () => (
 ));
 
 recipesStories.add('data', () => (
-  <ApolloMockingProvider
-    introspectionResult={introspectionResult}
+  <ApolloMockedProvider
+    typeDefs={typeDefs}
     mocks={apolloMocks}
   >
     <Recipes/>
-  </ApolloMockingProvider>
+  </ApolloMockedProvider>
 ));

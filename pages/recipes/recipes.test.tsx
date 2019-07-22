@@ -1,31 +1,38 @@
 import React from 'react';
 import { ApolloErrorProvider, ApolloLoadingProvider } from 'apollo-mocked';
-import { cleanup, render } from '@testing-library/react';
+import { cleanup, render, waitForElement } from '@testing-library/react';
 import Recipes from './';
 
-afterEach(cleanup);
-
 describe('Recipes', () => {
-  it('should render loading component if query is in flight', () => {
-    const { debug } = render(
+  afterEach(cleanup);
+
+  it('should render loading component', async () => {
+    const loadingText = 'loading...';
+
+    const { getByText } = render(
       <ApolloLoadingProvider>
         <Recipes/>
       </ApolloLoadingProvider>
     );
 
-    debug();
+    const node = await waitForElement(() => getByText(loadingText));
+    expect(node.innerHTML).toEqual(loadingText);
   });
 
-  it('should render error component if query fails', async () => {
+  it('should render error component', async () => {
     const errorMessage = 'Failed to fetch recipes.';
+    const errorRes = `GraphQL error: ${errorMessage}`;
 
-    const { debug } = render((
+    const { getByText } = render((
       <ApolloErrorProvider errorMessages={errorMessage}>
         <Recipes/>
       </ApolloErrorProvider>
     ));
 
-    await Promise.resolve();
-    debug();
+    const node = await waitForElement(() => getByText(errorRes), {
+      timeout: 1000
+    });
+
+    expect(node.innerHTML).toEqual(errorRes);
   });
 });
