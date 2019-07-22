@@ -29,7 +29,6 @@ module.exports = ({ config }) => {
 
   config.resolve.alias = {
     "@pages": path.resolve(__dirname, '../pages'),
-    "@apollo": path.resolve(__dirname, '../src/apollo'),
     "@components": path.resolve(__dirname, '../src/components'),
     "@constants": path.resolve(__dirname, '../src/constants'),
     "@containers": path.resolve(__dirname, '../src/containers'),

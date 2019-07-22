@@ -1,6 +1,6 @@
 import React from 'react';
 import NextApp, { AppProps, Container } from 'next/app';
-import { ApolloProvider } from 'react-apollo-hooks';
+import { ApolloProvider } from '@apollo/react-hooks';
 import { ThemeProvider } from 'styled-components';
 import { withApollo, WithApolloProps } from '@containers/withApollo';
 import { styledTheme } from '@styled/theme';
