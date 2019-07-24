@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { useUserById } from '@hooks/user/useUserById';
 import styled from 'styled-components';
 
