@@ -2,8 +2,8 @@
   "name": "with-typescript",
   "version": "1.0.0",
   "scripts": {
-    "dev": "tslint -p tslint.json && next",
-    "build": "next build",
+    "dev": "yarn apollo:generate && tslint -p tslint.json && next",
+    "build": "yarn apollo:generate && next build",
     "start": "next start",
     "test": "yarn schema:download && jest",
     "storybook": "yarn schema:download && start-storybook -p 6006 -c .storybook",
@@ -11,7 +11,8 @@
     "lint:ts": "tslint -p tslint.json --fix",
     "check:types": "tsc",
     "generate:types": "apollo client:codegen src/typings/generated.ts --outputFlat --target=typescript --endpoint=https://pi27u.sse.codesandbox.io --includes=./src/graphql/**/*.graphql --mergeInFieldsFromFragmentSpreads",
-    "schema:download": "apollo client:download-schema --endpoint=https://pi27u.sse.codesandbox.io --includes=./src/graphql/**/*.graphql"
+    "schema:download": "apollo client:download-schema --endpoint=https://pi27u.sse.codesandbox.io --includes=./src/graphql/**/*.graphql",
+    "apollo:generate": "yarn generate:types && yarn schema:download"
   },
   "dependencies": {
     "@apollo/react-hooks": "^0.1.0-beta.11",

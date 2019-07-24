@@ -1,6 +1,5 @@
 import React from 'react';
 import IntrospectionResult from '../../schema.json';
-import TypeDefs from '../../schema.graphql';
 import { StyledThemeProvider } from '@styled/StyledThemeProvider';
 import {
   ApolloErrorProvider,
@@ -11,7 +10,6 @@ import {
 import { User, UserDetail } from '@typings/generated';
 
 export const introspectionResult = IntrospectionResult;
-export const typeDefs = TypeDefs;
 
 export const StyledMockedProvider: React.FC<{}> = ({ children }) => (
   <StyledThemeProvider>
