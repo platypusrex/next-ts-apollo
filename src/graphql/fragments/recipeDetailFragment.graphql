@@ -1,8 +1,0 @@
-#import '../fragments/recipeFragment.graphql'
-
-fragment RecipeDetail on Recipe {
-  ...Recipe
-  description
-  createdAt
-  updatedAt
-}

@@ -1,0 +1,10 @@
+query UserByIdQuery ($userId: Float!) {
+  getUserById (userId: $userId) {
+    id
+    firstName
+    lastName
+    email
+    favoriteColors
+    quote
+  }
+}
