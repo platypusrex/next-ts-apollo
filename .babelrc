@@ -17,6 +17,7 @@
           "@containers": "./src/containers",
           "@constants": "./src/constants",
           "@hooks": "./src/hooks",
+          "@modules": "./src/modules",
           "@styled": "./src/styled",
           "@typings": "./src/typings",
           "@utils": "./src/utils",

@@ -4,9 +4,10 @@ import { styledTheme } from '../src/styled/theme.ts';
 import { ThemeProvider } from 'styled-components';
 
 // automatically import all files ending in *.stories.js
-const components = require.context('../src/components', true, /\.stories.tsx$/);
 const pages = require.context('../pages', true, /\.stories.tsx$/);
-const libs = [ components, pages ];
+const modules = require.context('../src/modules', true, /\.stories.tsx$/);
+const components = require.context('../src/components', true, /\.stories.tsx$/);
+const libs = [ pages, modules, components ];
 
 function loadStories() {
   libs.forEach(req => req.keys().forEach(f => req(f)))

@@ -26,6 +26,7 @@
       "@constants/*": ["./src/constants/*"],
       "@containers/*": ["./src/containers/*"],
       "@hooks/*": ["./src/hooks/*"],
+      "@modules/*": ["./src/modules/*"],
       "@styled/*": ["./src/styled/*"],
       "@typings/*": ["./src/typings/*"],
       "@utils/*": ["./src/utils/*"]

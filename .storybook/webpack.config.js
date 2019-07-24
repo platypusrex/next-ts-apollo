@@ -33,6 +33,7 @@ module.exports = ({ config }) => {
     "@constants": path.resolve(__dirname, '../src/constants'),
     "@containers": path.resolve(__dirname, '../src/containers'),
     "@hooks": path.resolve(__dirname, '../src/hooks'),
+    "@modules": path.resolve(__dirname, '../src/modules'),
     "@styled": path.resolve(__dirname, '../src/styled'),
     "@typings": path.resolve(__dirname, '../src/typings'),
     "@utils": path.resolve(__dirname, '../src/utils'),
