@@ -2,7 +2,6 @@ import { useQuery } from '@apollo/react-hooks';
 import { QueryResult } from '@apollo/react-common';
 import { userByIdQuery } from '@constants/graphqlLoader';
 import { UserByIdQuery, UserByIdQueryVariables, UserDetail } from '@typings/generated';
-import { Omit } from '@typings/shared';
 
 type UserByIdResult = Omit<QueryResult<UserByIdQuery, UserByIdQueryVariables>, 'data'>;
 type UseUserById = (userId: number | string) => UserByIdResult & {
