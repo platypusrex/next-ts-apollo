@@ -27,7 +27,7 @@ describe('useUserById', () => {
       result.current.error &&
       result.current.error.message;
 
-    expect(errorMessage).toEqual('GraphQL error: Unspecified error from ErrorProvider.')
+    expect(errorMessage).toEqual('GraphQL error: Unspecified error from ErrorProvider.');
   });
 
   it('to resolve a list of users', async () => {
