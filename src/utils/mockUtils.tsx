@@ -40,19 +40,21 @@ export const StyledLoadingProvider: React.FC<{}> = ({ children }) => (
   </StyledThemeProvider>
 );
 
-export const mockUsers: { [key: string]: Omit<User, '__typename'> } = {
-  user1: { id: 1, firstName: 'Ricky', lastName: 'Bobby', email: 'rbobby@email.com' },
-  user2: { id: 2, firstName: 'Brennan', lastName: 'Huff', email: 'bhuff@email.com' },
+export const mockUsers: { [key: string]: User} = {
+  user1: { id: 1, firstName: 'Ricky', lastName: 'Bobby', email: 'rbobby@email.com', __typename: 'User' },
+  user2: { id: 2, firstName: 'Brennan', lastName: 'Huff', email: 'bhuff@email.com',  __typename: 'User' },
 };
 
-export const mockUserDetail: Omit<UserDetail, '__typename'> = {
+export const mockUserDetail: UserDetail = {
   ...mockUsers.user1,
   favoriteColors: [ 'blue' ], quote: 'Pink is the new blue'
 };
 
+export const getAllUsersResult: User[] = Object.keys(mockUsers).map(key => mockUsers[key]);
+
 export const apolloMocks = {
   Query: () => ({
-    getAllUsers: () => Object.keys(mockUsers).map(key => mockUsers[key]),
+    getAllUsers: () => getAllUsersResult,
     getUserById: () => mockUserDetail,
   }),
 };
