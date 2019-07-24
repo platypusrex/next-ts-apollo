@@ -1,5 +1,5 @@
-import AllRecipesQuery from '../graphql/recipe/allRecipesQuery.graphql';
-import RecipeByIdQuery from '../graphql/recipe/recipeByIdQuery.graphql';
+import AllUsersQuery from '../graphql/user/allUsersQuery.graphql';
+import UserByIdQuery from '../graphql/user/userByIdQuery.graphql';
 
-export const allRecipesQuery = AllRecipesQuery;
-export const recipeByIdQuery = RecipeByIdQuery;
+export const allUsersQuery = AllUsersQuery;
+export const userByIdQuery = UserByIdQuery;
