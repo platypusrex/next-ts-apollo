@@ -1,7 +1,0 @@
-#import '../fragments/recipeDetailFragment.graphql'
-
-query RecipeByIdQuery ($recipeId: Float!) {
-  getRecipeById (recipeId: $recipeId) {
-    ...RecipeDetail
-  }
-}

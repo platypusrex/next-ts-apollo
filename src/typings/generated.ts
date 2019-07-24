@@ -3,42 +3,19 @@
 // This file was automatically generated and should not be edited.
 
 // ====================================================
-// GraphQL query operation: AllRecipesQuery
+// GraphQL query operation: AllUsersQuery
 // ====================================================
 
-export interface AllRecipesQuery_getAllRecipes {
-  __typename: "Recipe";
-  id: string;
-  title: string;
+export interface AllUsersQuery_getAllUsers {
+  __typename: "User";
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
 }
 
-export interface AllRecipesQuery {
-  getAllRecipes: AllRecipesQuery_getAllRecipes[];
-}
-
-/* tslint:disable */
-/* eslint-disable */
-// This file was automatically generated and should not be edited.
-
-// ====================================================
-// GraphQL query operation: RecipeByIdQuery
-// ====================================================
-
-export interface RecipeByIdQuery_getRecipeById {
-  __typename: "Recipe";
-  id: string;
-  title: string;
-  description: string | null;
-  createdAt: any;
-  updatedAt: any;
-}
-
-export interface RecipeByIdQuery {
-  getRecipeById: RecipeByIdQuery_getRecipeById;
-}
-
-export interface RecipeByIdQueryVariables {
-  recipeId: number;
+export interface AllUsersQuery {
+  getAllUsers: AllUsersQuery_getAllUsers[];
 }
 
 /* tslint:disable */
@@ -46,16 +23,25 @@ export interface RecipeByIdQueryVariables {
 // This file was automatically generated and should not be edited.
 
 // ====================================================
-// GraphQL fragment: RecipeDetail
+// GraphQL query operation: UserByIdQuery
 // ====================================================
 
-export interface RecipeDetail {
-  __typename: "Recipe";
-  id: string;
-  title: string;
-  description: string | null;
-  createdAt: any;
-  updatedAt: any;
+export interface UserByIdQuery_getUserById {
+  __typename: "User";
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  favoriteColors: string[];
+  quote: string;
+}
+
+export interface UserByIdQuery {
+  getUserById: UserByIdQuery_getUserById;
+}
+
+export interface UserByIdQueryVariables {
+  userId: number;
 }
 
 /* tslint:disable */
@@ -63,13 +49,33 @@ export interface RecipeDetail {
 // This file was automatically generated and should not be edited.
 
 // ====================================================
-// GraphQL fragment: Recipe
+// GraphQL fragment: UserDetail
 // ====================================================
 
-export interface Recipe {
-  __typename: "Recipe";
-  id: string;
-  title: string;
+export interface UserDetail {
+  __typename: "User";
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  favoriteColors: string[];
+  quote: string;
+}
+
+/* tslint:disable */
+/* eslint-disable */
+// This file was automatically generated and should not be edited.
+
+// ====================================================
+// GraphQL fragment: User
+// ====================================================
+
+export interface User {
+  __typename: "User";
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
 }
 
 /* tslint:disable */

@@ -1321,11 +1321,6 @@
   resolved "https://registry.yarnpkg.com/@icons/material/-/material-0.2.4.tgz#e90c9f71768b3736e76d7dd6783fc6c2afa88bc8"
   integrity sha512-QPcGmICAPbGLGb6F/yNf/KzKqvFx8z5qx3D1yFqVAjoFmXK35EgyW+cJ57Te3CNsmzblwtzakLGFqHPqrfb4Tw==
 
-"@jagi/jest-transform-graphql@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@jagi/jest-transform-graphql/-/jest-transform-graphql-1.0.2.tgz#63d5a9c201dc18dbdf508a0d4c3029448d7b5250"
-  integrity sha512-VgdTMAI7LwOOhPP1TeZvm6knYbrcp3NOpP58/Rt9ldUwQSToDwlMyCrun9NR/BaBzd10QhBgt/BrOKQ8qjEbIQ==
-
 "@jest/console@^24.7.1":
   version "24.7.1"
   resolved "https://registry.yarnpkg.com/@jest/console/-/console-24.7.1.tgz#32a9e42535a97aedfe037e725bd67e954b459545"
@@ -1504,15 +1499,7 @@
     debug "^4.1.1"
     semver "^5.6.0"
 
-"@oclif/config@1.13.0":
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/@oclif/config/-/config-1.13.0.tgz#fc2bd82a9cb30a73faf7d2aa5ae937c719492bd1"
-  integrity sha512-ttb4l85q7SBx+WlUJY4A9eXLgv4i7hGDNGaXnY9fDKrYD7PBMwNOQ3Ssn2YT2yARAjyOxVE/5LfcwhQGq4kzqg==
-  dependencies:
-    debug "^4.1.1"
-    tslib "^1.9.3"
-
-"@oclif/config@^1.12.8", "@oclif/config@^1.6.22":
+"@oclif/config@1.13.2", "@oclif/config@^1.12.8", "@oclif/config@^1.6.22":
   version "1.13.2"
   resolved "https://registry.yarnpkg.com/@oclif/config/-/config-1.13.2.tgz#c1dc25296bf06c039fd5fb0b90e4132be2213b2a"
   integrity sha512-RUOKeuAaopo3zrA5hcgE0PT2lbAUT72+eJdqTlWyI9sbPrGHZgUwV+vrL6Qal7ywWYDkL0vrKd1YS4yXtKIDKw==
@@ -2139,10 +2126,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/graphql@^14.2.2":
-  version "14.2.2"
-  resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-14.2.2.tgz#10f197e6f8559c11b16d630c5e9c10c3c8e61c5e"
-  integrity sha512-okXbUmdZFMO3AYBEJCcpJFPFDkKmIiZZBqWD5TmPtAv+GHfjD2qLZEI0PvZ8IWMU4ozoK2HV2lDxWjw4LbVlnw==
+"@types/graphql@^14.2.3":
+  version "14.2.3"
+  resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-14.2.3.tgz#cfc6420a67eb20420786f90112357921974593b9"
+  integrity sha512-UoCovaxbJIxagCvVfalfK7YaNhmxj3BQFRQ2RHQKLiu+9wNXhJnlbspsLHt/YQM99IaLUUFJNzCwzc6W0ypMeQ==
 
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.1"
@@ -2700,74 +2687,74 @@ apollo-client@^2.6.3:
     tslib "^1.9.3"
     zen-observable "^0.8.0"
 
-apollo-codegen-core@0.34.9:
-  version "0.34.9"
-  resolved "https://registry.yarnpkg.com/apollo-codegen-core/-/apollo-codegen-core-0.34.9.tgz#d851780e576aa75b75c7b71a8bd6579771182631"
-  integrity sha512-70UiWIW3WmmUoixUV4W5Um4DJGQetpeL6ZwALFDrIHpjZwlMsOhQVDRe1gS7pLtuxxdvjhOcP/kiGbrSvQaPrg==
+apollo-codegen-core@0.34.10:
+  version "0.34.10"
+  resolved "https://registry.yarnpkg.com/apollo-codegen-core/-/apollo-codegen-core-0.34.10.tgz#89a1923f28a02ddb3e6f8b4dcf13f8196548218a"
+  integrity sha512-0kUjcdQGqX03++c+tINtz3zzxr3wQ0/7e3BraASBGUC015TUs8Zktrinc9Ekitfrnen29//RTMPQPOxPctVL/g==
   dependencies:
     "@babel/generator" "7.5.0"
     "@babel/parser" "^7.1.3"
     "@babel/types" "7.5.0"
     apollo-env "0.5.1"
-    apollo-language-server "1.13.0"
+    apollo-language-server "1.13.1"
     ast-types "^0.13.0"
     common-tags "^1.5.1"
     recast "^0.18.0"
 
-apollo-codegen-flow@0.33.19:
-  version "0.33.19"
-  resolved "https://registry.yarnpkg.com/apollo-codegen-flow/-/apollo-codegen-flow-0.33.19.tgz#cf4cf8921a20952758e6d1b8d6d19fcd14cc7a61"
-  integrity sha512-OaWoAsvJG69jp2h+Uu6DXTMlsk5FMCqpJkLQSxu7gAFxF8/PQF0waL9YB6EvVRFCGdJDr70KgFmLjGjfubuCkQ==
+apollo-codegen-flow@0.33.20:
+  version "0.33.20"
+  resolved "https://registry.yarnpkg.com/apollo-codegen-flow/-/apollo-codegen-flow-0.33.20.tgz#2061963a6398184e5099a4349d77f7b198e88b39"
+  integrity sha512-YFw18yTVQRWqq7Ljf8Iq7vAuCeWkfGXUozJfvUc3dAYooIy0YBK6dkrRF60pbOGqtIsf8goatgOhNiIX7vFGog==
   dependencies:
     "@babel/generator" "7.5.0"
     "@babel/types" "7.5.0"
-    apollo-codegen-core "0.34.9"
+    apollo-codegen-core "0.34.10"
     apollo-env "0.5.1"
     change-case "^3.0.1"
     common-tags "^1.5.1"
     inflected "^2.0.3"
 
-apollo-codegen-scala@0.34.19:
-  version "0.34.19"
-  resolved "https://registry.yarnpkg.com/apollo-codegen-scala/-/apollo-codegen-scala-0.34.19.tgz#80ca19a5c86651d1a3d7105c9ad0cd0b44157475"
-  integrity sha512-SgkJ5ZyEOnt3svXY7q1yp2Fc42Qw83drtmc+NcDW0gcVSAB+zILosg43q29AUWw9MU2fiNfl4mRCaOw80AiVGQ==
+apollo-codegen-scala@0.34.20:
+  version "0.34.20"
+  resolved "https://registry.yarnpkg.com/apollo-codegen-scala/-/apollo-codegen-scala-0.34.20.tgz#0cfa019a269fe0026a4b096fb646068c8cc38446"
+  integrity sha512-MP0WB4vTfqg5hAkj/JP3XjY++tfirnlJ/ALc7EJF87Gj2QZz191YRypDdURMCN1eB0zV8L6Zy3gFXrl+GoVwbA==
   dependencies:
-    apollo-codegen-core "0.34.9"
+    apollo-codegen-core "0.34.10"
     apollo-env "0.5.1"
     change-case "^3.0.1"
     common-tags "^1.5.1"
     inflected "^2.0.3"
 
-apollo-codegen-swift@0.34.0:
-  version "0.34.0"
-  resolved "https://registry.yarnpkg.com/apollo-codegen-swift/-/apollo-codegen-swift-0.34.0.tgz#1fdb9668d675cd87d1f024885a1b58bb548769f6"
-  integrity sha512-HZlnZ/2tqjSudhxQxkDs49jjiXmgjrMV3zf8PCCdeTxzGhp9hbTD5f/BLF8rL7c3f4UjG3CZr9KOqTx1i1dYww==
+apollo-codegen-swift@0.34.1:
+  version "0.34.1"
+  resolved "https://registry.yarnpkg.com/apollo-codegen-swift/-/apollo-codegen-swift-0.34.1.tgz#3305470789b4496a615ad29e3e7a8e6ef4568d70"
+  integrity sha512-ZCtdAw57xgpfJPIxY6fX6HUr0b5Sa+RYsyup0kDYbGWlMuruJGH/q2J1JGvzDj6+u0OCtSyuWvXx2+8xAdM0QA==
   dependencies:
-    apollo-codegen-core "0.34.9"
+    apollo-codegen-core "0.34.10"
     apollo-env "0.5.1"
     change-case "^3.0.1"
     common-tags "^1.5.1"
     inflected "^2.0.3"
 
-apollo-codegen-typescript@0.34.9:
-  version "0.34.9"
-  resolved "https://registry.yarnpkg.com/apollo-codegen-typescript/-/apollo-codegen-typescript-0.34.9.tgz#f146f5a8efdf878be6f42fd5ae9c929ac4c9e6a8"
-  integrity sha512-XgvBjPObM+Zt2mUO1xfw+Erp50CL5ppLAv3du/mncZYo8soaN1BZCEBXgPUmW4SsAK4hh+kfBZ96eszr8mUXeg==
+apollo-codegen-typescript@0.34.10:
+  version "0.34.10"
+  resolved "https://registry.yarnpkg.com/apollo-codegen-typescript/-/apollo-codegen-typescript-0.34.10.tgz#de5c1d95a4fed00e1c84fe7a39433f9d32a9535f"
+  integrity sha512-rxPx+2+K1j3aNsGo6JmfIa5rndeYiXJs26TL4QBVUcMaqtVJs8/EG1L3ViPOhLXjlPjEFLimWwpcFAo3TYzIiA==
   dependencies:
     "@babel/generator" "7.5.0"
     "@babel/types" "7.5.0"
-    apollo-codegen-core "0.34.9"
+    apollo-codegen-core "0.34.10"
     apollo-env "0.5.1"
     change-case "^3.0.1"
     common-tags "^1.5.1"
     inflected "^2.0.3"
 
-apollo-datasource@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/apollo-datasource/-/apollo-datasource-0.5.0.tgz#7a8c97e23da7b9c15cb65103d63178ab19eca5e9"
-  integrity sha512-SVXxJyKlWguuDjxkY/WGlC/ykdsTmPxSF0z8FenagcQ91aPURXzXP1ZDz5PbamY+0iiCRubazkxtTQw4GWTFPg==
+apollo-datasource@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/apollo-datasource/-/apollo-datasource-0.6.0.tgz#823d6be8a3804613b5c56d2972c07db662293fc6"
+  integrity sha512-DOzzYWEOReYRu2vWPKEulqlTb9Xjg67sjVCzve5MXa7GUXjfr8IKioljvfoBMlqm/PpbJVk2ci4n5NIFqoYsrQ==
   dependencies:
-    apollo-server-caching "0.4.0"
+    apollo-server-caching "0.5.0"
     apollo-server-env "2.4.0"
 
 apollo-env@0.5.1:
@@ -2787,15 +2774,15 @@ apollo-graphql@0.3.3:
     apollo-env "0.5.1"
     lodash.sortby "^4.7.0"
 
-apollo-language-server@1.13.0:
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/apollo-language-server/-/apollo-language-server-1.13.0.tgz#3cfd986f216f792744e8d02754602797701ae1a1"
-  integrity sha512-cw67oI8UYokGuNY+uvrE23I7YkIdce/EPX8vbLJrXtQXgdD6zFo66AckOuiNxXexayijLH8iLjhcfYndL7Vtyw==
+apollo-language-server@1.13.1:
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/apollo-language-server/-/apollo-language-server-1.13.1.tgz#f61206808c5d9f3613d8aa2dcb511dc12b74c8ab"
+  integrity sha512-zjWm3A+z7+HuR/6yHFtw4lZcBBeJVzF3Lqxzm8TuzeBgqfPHCgJBMibZFb+n2aPQuuFj6FZayDH4vFGIMInaQA==
   dependencies:
     "@apollographql/apollo-tools" "0.4.0"
     "@apollographql/graphql-language-service-interface" "^2.0.2"
     "@endemolshinegroup/cosmiconfig-typescript-loader" "^1.0.0"
-    apollo-datasource "^0.5.0"
+    apollo-datasource "^0.6.0"
     apollo-env "0.5.1"
     apollo-link "^1.2.3"
     apollo-link-context "^1.0.9"
@@ -2861,10 +2848,10 @@ apollo-link@^1.0.0, apollo-link@^1.0.6, apollo-link@^1.2.12, apollo-link@^1.2.3:
     tslib "^1.9.3"
     zen-observable-ts "^0.8.19"
 
-apollo-mocked@^0.2.10:
-  version "0.2.10"
-  resolved "https://registry.yarnpkg.com/apollo-mocked/-/apollo-mocked-0.2.10.tgz#744cb095054cbbc5fcb8f5e912084c52e02066ff"
-  integrity sha512-OtjrYB1M9Um3hY7Ptuv3I7zmUz/diOVjp6+CDCNAf2TiCO4otEYzFG4DO4rFhatZGNLOct3R23ipZDxmpRufYg==
+apollo-mocked@^0.2.14:
+  version "0.2.14"
+  resolved "https://registry.yarnpkg.com/apollo-mocked/-/apollo-mocked-0.2.14.tgz#f68dd947301e349ec8e0679703638c10f2099ef6"
+  integrity sha512-eHHTvn3PyZN5syEJlhl/bzTW86pDfU3Gt47PzB+Ar94E7nlMFrzeK31DjdRCap5xVSPotE2aowQsBmFTddcX+Q==
   dependencies:
     "@apollo/react-hooks" "^0.1.0-beta.11"
     apollo-cache-inmemory "^1.6.2"
@@ -2872,10 +2859,10 @@ apollo-mocked@^0.2.10:
     graphql "^14.4.2"
     graphql-tools "^4.0.5"
 
-apollo-server-caching@0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/apollo-server-caching/-/apollo-server-caching-0.4.0.tgz#e82917590d723c0adc1fa52900e79e93ad65e4d9"
-  integrity sha512-GTOZdbLhrSOKYNWMYgaqX5cVNSMT0bGUTZKV8/tYlyYmsB6ey7l6iId3Q7UpHS6F6OR2lstz5XaKZ+T3fDfPzQ==
+apollo-server-caching@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/apollo-server-caching/-/apollo-server-caching-0.5.0.tgz#446a37ce2d4e24c81833e276638330a634f7bd46"
+  integrity sha512-l7ieNCGxUaUAVAAp600HjbUJxVaxjJygtPV0tPTe1Q3HkPy6LEWoY6mNHV7T268g1hxtPTxcdRu7WLsJrg7ufw==
   dependencies:
     lru-cache "^5.0.0"
 
@@ -2902,28 +2889,28 @@ apollo-utilities@1.3.2, apollo-utilities@^1.0.1, apollo-utilities@^1.3.0, apollo
     ts-invariant "^0.4.0"
     tslib "^1.9.3"
 
-apollo@^2.16.0:
-  version "2.16.0"
-  resolved "https://registry.yarnpkg.com/apollo/-/apollo-2.16.0.tgz#7467a93e81c5ec31afa82b78f2ec3ace84f8a207"
-  integrity sha512-yStTQ/YDaDk/IY3YeRhhy9sfHdqQxRmVoV5zinLKUeCRxxarxl7xOTz0jcyic1YKF36TObn3QMPPJ8CRg5XWKw==
+apollo@^2.16.1:
+  version "2.16.1"
+  resolved "https://registry.yarnpkg.com/apollo/-/apollo-2.16.1.tgz#bb752141ad88eff3a96e1e27cb4385807e163c10"
+  integrity sha512-71x1Cn5xpcxbmFyaM8ZQpnjK1KPUC+JNAzmzfQd/680R/m1+ks8WiAI5zfUN9qH0JOMBatXlG0YsAgTf6y5Jaw==
   dependencies:
     "@apollographql/apollo-tools" "0.4.0"
     "@oclif/command" "1.5.16"
-    "@oclif/config" "1.13.0"
+    "@oclif/config" "1.13.2"
     "@oclif/errors" "1.2.2"
     "@oclif/plugin-autocomplete" "0.1.1"
     "@oclif/plugin-help" "2.2.0"
     "@oclif/plugin-not-found" "1.2.2"
     "@oclif/plugin-plugins" "1.7.8"
     "@oclif/plugin-warn-if-update-available" "1.7.0"
-    apollo-codegen-core "0.34.9"
-    apollo-codegen-flow "0.33.19"
-    apollo-codegen-scala "0.34.19"
-    apollo-codegen-swift "0.34.0"
-    apollo-codegen-typescript "0.34.9"
+    apollo-codegen-core "0.34.10"
+    apollo-codegen-flow "0.33.20"
+    apollo-codegen-scala "0.34.20"
+    apollo-codegen-swift "0.34.1"
+    apollo-codegen-typescript "0.34.10"
     apollo-env "0.5.1"
     apollo-graphql "0.3.3"
-    apollo-language-server "1.13.0"
+    apollo-language-server "1.13.1"
     chalk "2.4.2"
     env-ci "3.2.2"
     gaze "1.1.3"
@@ -7452,6 +7439,11 @@ jest-snapshot@^24.8.0:
     pretty-format "^24.8.0"
     semver "^5.5.0"
 
+jest-transform-graphql@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/jest-transform-graphql/-/jest-transform-graphql-2.1.0.tgz#903cb66bb27bc2772fd3e5dd4f7e9b57230f5829"
+  integrity sha1-kDy2a7J7wncv0+XdT36bVyMPWCk=
+
 jest-util@^24.8.0:
   version "24.8.0"
   resolved "https://registry.yarnpkg.com/jest-util/-/jest-util-24.8.0.tgz#41f0e945da11df44cc76d64ffb915d0716f46cd1"
@@ -7899,11 +7891,6 @@ lodash.identity@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/lodash.identity/-/lodash.identity-3.0.0.tgz#ad7bc6a4e647d79c972e1b80feef7af156267876"
   integrity sha1-rXvGpOZH15yXLhuA/u968VYmeHY=
-
-lodash.isequal@^4.5.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
-  integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
 
 lodash.isplainobject@^4.0.6:
   version "4.0.6"
@@ -9777,19 +9764,6 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-apollo@^2.5.8:
-  version "2.5.8"
-  resolved "https://registry.yarnpkg.com/react-apollo/-/react-apollo-2.5.8.tgz#c7a593b027efeefdd8399885e0ac6bec3b32623c"
-  integrity sha512-60yOQrnNosxU/tRbOxGDaYNLFcOKmQqxHPhxyvKTlGIaF/rRCXQRKixUgWVffpEupSHHD7psY5k5ZOuZsdsSGQ==
-  dependencies:
-    apollo-utilities "^1.3.0"
-    fast-json-stable-stringify "^2.0.0"
-    hoist-non-react-statics "^3.3.0"
-    lodash.isequal "^4.5.0"
-    prop-types "^15.7.2"
-    ts-invariant "^0.4.2"
-    tslib "^1.9.3"
-
 react-clientside-effect@^1.2.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/react-clientside-effect/-/react-clientside-effect-1.2.1.tgz#feb81abe9531061d4987941c15a00f2b3d0b6071"
@@ -9853,7 +9827,7 @@ react-docgen@^4.1.0:
     node-dir "^0.1.10"
     recast "^0.17.3"
 
-react-dom@^16.8.3, react-dom@^16.8.6:
+react-dom@^16.8.3:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
   integrity sha512-1nL7PIq9LTL3fthPqwkvr2zY7phIPjYrT0jp4HjyEQrEROnw4dG41VVwi/wfoCneoleqrNX7iAD+pXebJZwrwA==
@@ -9862,6 +9836,16 @@ react-dom@^16.8.3, react-dom@^16.8.6:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.13.6"
+
+react-dom@^16.9.0-alpha.0:
+  version "16.9.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.9.0-alpha.0.tgz#9dfaec18ac1a500fa72cab7b70f2ae29d0cd7716"
+  integrity sha512-BQ5gN42yIPuTnBvE6K9vSjNfDRpSNcYCs2sUx9XR5VaWKwlHTt3G6qIWK6zdXy8TYKb1+IxpsAI0RtbRdXQZ2A==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.2"
+    scheduler "^0.14.0-alpha.0"
 
 react-draggable@^3.1.1:
   version "3.3.0"
@@ -9999,7 +9983,7 @@ react-transition-group@^2.2.1:
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
 
-react@^16.8.3, react@^16.8.6:
+react@^16.8.3:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
   integrity sha512-pC0uMkhLaHm11ZSJULfOBqV4tIZkx87ZLvbbQYunNixAAvjnC+snJCg0XQXn9VIsttVsbZP/H/ewzgsd5fxKXw==
@@ -10008,6 +9992,16 @@ react@^16.8.3, react@^16.8.6:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.13.6"
+
+react@^16.9.0-alpha.0:
+  version "16.9.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.9.0-alpha.0.tgz#e350f3d8af36e3251079cbc90d304620e2f78ccb"
+  integrity sha512-y4bu7rJvtnPPsIwOj7sp5Y2SqlOb0jFupfkdjWxxn8ZeqzUARgpR9wJBUVwW1/QosVdOblmApjo/j6iiAXnebA==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.2"
+    scheduler "^0.14.0-alpha.0"
 
 reactcss@^1.2.0:
   version "1.2.3"
@@ -10511,6 +10505,14 @@ scheduler@^0.13.6:
   version "0.13.6"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.13.6.tgz#466a4ec332467b31a91b9bf74e5347072e4cd889"
   integrity sha512-IWnObHt413ucAYKsD9J1QShUKkbKLQQHdxRyw73sw4FN26iWr3DY/H34xGPe4nmL1DwXyWmSWmMrA9TfQbE/XQ==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+
+scheduler@^0.14.0-alpha.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.14.0.tgz#b392c23c9c14bfa2933d4740ad5603cc0d59ea5b"
+  integrity sha512-9CgbS06Kki2f4R9FjLSITjZo5BZxPsryiRNyL3LpvrM9WxcVmhlqAOc9E+KQbeI2nqej4JIIbOsfdL51cNb4Iw==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -11496,7 +11498,7 @@ trough@^1.0.0:
   resolved "https://registry.yarnpkg.com/trough/-/trough-1.0.4.tgz#3b52b1f13924f460c3fbfd0df69b587dbcbc762e"
   integrity sha512-tdzBRDGWcI1OpPVmChbdSKhvSVurznZ8X36AYURAcl+0o2ldlCY2XPzyXNNxwJwwyIU+rIglTCG4kxtNKBQH7Q==
 
-ts-invariant@^0.4.0, ts-invariant@^0.4.2, ts-invariant@^0.4.4:
+ts-invariant@^0.4.0, ts-invariant@^0.4.4:
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/ts-invariant/-/ts-invariant-0.4.4.tgz#97a523518688f93aafad01b0e80eb803eb2abd86"
   integrity sha512-uEtWkFM/sdZvRNNDL3Ehu4WVpwaulhwQszV8mrtcdeE8nN00BV9mAmQ88RkrBhFgl9gMgvjJLAQcZbnPXI9mlA==

@@ -1,0 +1,7 @@
+#import './userFragment.graphql'
+
+fragment UserDetail on User {
+  ...User
+  favoriteColors
+  quote
+}

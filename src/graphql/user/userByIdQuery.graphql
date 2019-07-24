@@ -1,0 +1,7 @@
+#import '../fragments/userDetailFragment.graphql'
+
+query UserByIdQuery ($userId: Float!) {
+  getUserById (userId: $userId) {
+    ...UserDetail
+  }
+}

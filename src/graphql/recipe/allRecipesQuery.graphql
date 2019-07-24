@@ -1,7 +1,0 @@
-#import '../fragments/recipeFragment.graphql'
-
-query AllRecipesQuery {
-  getAllRecipes {
-    ...Recipe
-  }
-}

@@ -5,7 +5,7 @@ module.exports = {
   testRegex: TEST_REGEX,
   transform: {
     '^.+\\.tsx?$': 'babel-jest',
-    "\\.(gql|graphql)$": "@jagi/jest-transform-graphql"
+    "\\.(gql|graphql)$": "jest-transform-graphql"
   },
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
