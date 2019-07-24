@@ -1,28 +1,28 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { ApolloLoadingProvider, ApolloErrorProvider, ApolloMockedProvider } from 'apollo-mocked';
-import { apolloMocks, typeDefs } from '@utils/apolloMocks';
-import Recipes from './';
+import { apolloMocks, introspectionResult } from '@utils/mockUtils';
+import { Users } from './';
 
-const recipesStories = storiesOf('Recipes', module);
+const usersStories = storiesOf('Users', module);
 
-recipesStories.add('loading', () => (
+usersStories.add('loading', () => (
   <ApolloLoadingProvider>
-    <Recipes/>
+    <Users/>
   </ApolloLoadingProvider>
 ));
 
-recipesStories.add('error', () => (
+usersStories.add('error', () => (
   <ApolloErrorProvider>
-    <Recipes/>
+    <Users/>
   </ApolloErrorProvider>
 ));
 
-recipesStories.add('data', () => (
+usersStories.add('data', () => (
   <ApolloMockedProvider
-    typeDefs={typeDefs}
+    introspectionResult={introspectionResult}
     mocks={apolloMocks}
   >
-    <Recipes/>
+    <Users/>
   </ApolloMockedProvider>
 ));
