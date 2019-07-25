@@ -42,11 +42,10 @@ Open `http://localhost:3000` to view the app in the browser.<br>
 This script will also run a series of scripts in order: `apollo:generate`, `lint:ts`, `next`.
 
 #### `yarn build`
-Runs `next build` script.<br>
 Builds the app for production.
 
 #### `yarn start`
-Runs `next start` script.
+Runs the built app in production mode.
 
 #### `yarn test`
 Launches `jest` test runner.<br>
