@@ -7,7 +7,7 @@
     "start": "next start",
     "test": "yarn schema:download && jest",
     "storybook": "yarn schema:download && start-storybook -p 6006 -c .storybook",
-    "build-storybook": "yarn schema:download && build-storybook",
+    "storybook:build": "yarn schema:download && build-storybook",
     "lint:ts": "tslint -p tslint.json --fix",
     "check:types": "tsc",
     "generate:types": "apollo client:codegen src/typings/generated.ts --outputFlat --target=typescript --endpoint=https://pi27u.sse.codesandbox.io --includes=./src/graphql/**/*.graphql --mergeInFieldsFromFragmentSpreads",
