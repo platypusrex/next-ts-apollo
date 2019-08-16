@@ -18,8 +18,10 @@ export const withApollo = (App: typeof AppComponent) => {
   return class Apollo extends React.Component<ApolloProps> {
     static displayName = 'withApollo(App)';
 
-    static async getInitialProps (ctx: AppContext) {
-      const { Component, router } = ctx;
+    // tslint:disable-next-line no-any
+    static async getInitialProps (ctx: AppContext & { AppTree: any }) {
+      const { AppTree } = ctx;
+
       let appProps = {};
 
       if (App.getInitialProps) {
@@ -33,15 +35,7 @@ export const withApollo = (App: typeof AppComponent) => {
       if (typeof window === 'undefined') {
         try {
           // Run all GraphQL queries
-          await getDataFromTree(
-            <App
-              {...appProps}
-              pageProps={{}}
-              Component={Component}
-              router={router}
-              apolloClient={apollo}
-            />
-          );
+          await getDataFromTree(<AppTree {...appProps} apolloClient={apollo} />);
         } catch (error) {
           // Prevent Apollo Client GraphQL errors from crashing SSR.
           // Handle them in components via the data.error prop:

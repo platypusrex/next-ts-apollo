@@ -1,6 +1,26 @@
 {
-  "name": "with-typescript",
+  "name": "next-apollo-ts",
   "version": "1.0.0",
+  "author": "Frank Cooke",
+  "description": "A next.js | apollo | typescript boilerplate",
+  "keywords": [
+    "nextjs",
+    "react",
+    "apollo",
+    "typescript",
+    "jest",
+    "react-testing-library",
+    "styled-components",
+    "graphql"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/platypusrex/next-ts-apollo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/platypusrex/next-ts-apollo/issues"
+  },
+  "homepage": "https://github.com/platypusrex/next-ts-apollo#readme",
   "scripts": {
     "dev": "yarn apollo:generate && tslint -p tslint.json && next",
     "build": "yarn apollo:generate && next build",
@@ -15,45 +35,44 @@
     "apollo:generate": "yarn generate:types && yarn schema:download"
   },
   "dependencies": {
-    "@apollo/react-hooks": "^0.1.0-beta.11",
-    "@apollo/react-ssr": "^0.1.0-beta.1",
+    "@apollo/react-hooks": "^3.0.1",
+    "@apollo/react-ssr": "^3.0.1",
     "@testing-library/react-hooks": "^1.1.0",
-    "apollo-boost": "^0.4.3",
-    "apollo-mocked": "^0.2.14",
+    "apollo-boost": "^0.4.4",
+    "apollo-mocked": "^0.2.16",
     "graphql": "^14.4.2",
     "isomorphic-unfetch": "^3.0.0",
-    "next": "^9.0.2",
-    "react": "^16.9.0-alpha.0",
-    "react-dom": "^16.9.0-alpha.0",
+    "next": "^9.0.3",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
-    "@storybook/addon-knobs": "^5.1.9",
-    "@storybook/addons": "^5.1.9",
-    "@storybook/react": "^5.1.9",
+    "@storybook/addon-knobs": "^5.1.11",
+    "@storybook/addons": "^5.1.11",
+    "@storybook/react": "^5.1.11",
     "@testing-library/jest-dom": "^4.0.0",
-    "@testing-library/react": "^8.0.5",
+    "@testing-library/react": "^9.1.2",
     "@types/graphql": "^14.2.3",
-    "@types/jest": "^24.0.15",
-    "@types/node": "^12.6.8",
-    "@types/react": "^16.8.23",
-    "@types/react-dom": "^16.8.4",
+    "@types/jest": "^24.0.17",
+    "@types/node": "^12.7.2",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.8.5",
     "@types/storybook__addon-knobs": "^5.0.3",
     "@types/storybook__react": "^4.0.2",
     "@types/styled-components": "^4.1.18",
-    "apollo": "^2.16.1",
+    "apollo": "^2.17.4",
     "awesome-typescript-loader": "^5.2.1",
     "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
     "babel-plugin-module-resolver": "^3.2.0",
     "babel-plugin-styled-components": "^1.10.6",
     "jest": "^24.8.0",
     "jest-transform-graphql": "^2.1.0",
     "next-plugin-graphql": "^0.0.2",
+    "react-test-renderer": "^16.9.0",
     "tslint": "^5.18.0",
     "typescript": "3.5.3"
   },
-  "license": "ISC",
-  "peerDependencies": {
-    "react-test-renderer": "16.9.0-alpha.0"
-  }
+  "license": "ISC"
 }
