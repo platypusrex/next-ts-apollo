@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
-import { styledTheme } from '../../styled/theme';
+import { styledTheme } from '@styled/theme';
 import { Link, LinkProps } from './';
 
 const LinkWithTheme: React.FC<LinkProps> = ({ size }) => (

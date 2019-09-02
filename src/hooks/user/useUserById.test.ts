@@ -5,7 +5,7 @@ import {
   StyledMockedProvider,
   StyledLoadingProvider,
   mockUserDetail
-} from '../../utils/mockUtils';
+} from '@utils/mockUtils';
 
 describe('useUserById', () => {
   it('to be loading data', () => {

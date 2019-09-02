@@ -10,11 +10,7 @@
   ],
   "exclude": [
     "node_modules",
-    "next.config.js",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "**/*.test.ts",
-    "**/*.test.tsx"
+    "next.config.js"
   ],
   "include": [
     "**/*.ts",

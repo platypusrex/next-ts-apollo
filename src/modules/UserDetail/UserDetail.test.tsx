@@ -5,7 +5,7 @@ import {
   StyledErrorProvider,
   StyledLoadingProvider,
   StyledMockedProvider,
-} from '../../utils/mockUtils';
+} from '@utils/mockUtils';
 
 describe('UserDetail', () => {
   afterEach(cleanup);
@@ -20,7 +20,7 @@ describe('UserDetail', () => {
     );
 
     const node = await waitForElement(() => getByText(loadingText));
-    expect(node.innerHTML).toEqual(loadingText);
+    expect(node).toHaveTextContent(loadingText);
   });
 
   it('should render error component', async () => {
@@ -34,7 +34,7 @@ describe('UserDetail', () => {
     ));
 
     const node = await waitForElement(() => getByText(errorRes));
-    expect(node.innerHTML).toEqual(errorRes);
+    expect(node).toHaveTextContent(errorRes);
   });
 
   it('should render a list of users', async () => {
@@ -46,6 +46,6 @@ describe('UserDetail', () => {
 
     const node = await waitForElement(() => getByText('Ricky Bobby'));
 
-    expect(node.innerHTML).toEqual('Ricky Bobby');
+    expect(node).toHaveTextContent('Ricky Bobby');
   });
 });

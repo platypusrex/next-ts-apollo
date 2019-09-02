@@ -5,7 +5,7 @@ import {
   StyledErrorProvider,
   StyledMockedProvider,
   StyledLoadingProvider
-} from '../../utils/mockUtils';
+} from '@utils/mockUtils';
 
 describe('useAllUsers', () => {
   it('to be loading data', () => {
