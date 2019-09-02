@@ -1,5 +1,5 @@
 import React from 'react';
-import NextApp, { AppProps, Container } from 'next/app';
+import NextApp, { AppProps } from 'next/app';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { StyledThemeProvider } from '@styled/StyledThemeProvider';
 import { withApollo, WithApolloProps } from '@containers/withApollo';
@@ -10,14 +10,14 @@ class App extends NextApp<AppProps & WithApolloProps> {
     const { Component, pageProps, apolloClient } = this.props;
 
     return (
-      <Container>
+      <>
         <GlobalStyle/>
         <ApolloProvider client={apolloClient}>
           <StyledThemeProvider>
             <Component {...pageProps} />
           </StyledThemeProvider>
         </ApolloProvider>
-      </Container>
+      </>
     );
   }
 }
