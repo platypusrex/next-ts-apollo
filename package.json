@@ -42,7 +42,7 @@
     "apollo-mocked": "^0.2.16",
     "graphql": "^14.4.2",
     "isomorphic-unfetch": "^3.0.0",
-    "next": "^9.0.5",
+    "next": "^11.1.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "styled-components": "^4.3.2"
